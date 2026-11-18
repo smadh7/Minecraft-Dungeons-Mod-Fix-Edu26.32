@@ -1,0 +1,75 @@
+{
+  "format_version": "1.21.40",
+  "netherrack": {
+    "isotropic": true,
+    "sound": "netherrack",
+    "textures": "netherrack",
+    "blockshape": "invisible"
+  },
+  "basalt": {
+    "sound": "basalt",
+    "textures": {
+      "down": "basalt_top",
+      "side": "basalt_side",
+      "up": "basalt_top"
+    },
+    "blockshape": "invisible"
+  },
+  "blackstone": {
+    "sound": "stone",
+    "textures": {
+      "down": "blackstone_top",
+      "side": "blackstone",
+      "up": "blackstone_top"
+    },
+    "blockshape": "invisible"
+  },
+  "soul_sand": {
+    "sound": "soul_sand",
+    "textures": "soul_sand",
+    "blockshape": "invisible"
+  },
+  "soul_soil": {
+    "sound": "soul_soil",
+    "textures": "soul_soil",
+    "blockshape": "invisible"
+  },
+  "crimson_nylium": {
+    "isotropic": {
+      "down": true,
+      "up": true
+    },
+    "sound": "nylium",
+    "textures": {
+      "down": "netherrack",
+      "east": "crimson_nylium_side",
+      "north": "crimson_nylium_side",
+      "south": "crimson_nylium_side",
+      "up": "crimson_nylium_top",
+      "west": "crimson_nylium_side"
+    },
+    "blockshape": "invisible"
+  },
+  "warped_nylium": {
+    "isotropic": {
+      "down": true,
+      "up": true
+    },
+    "sound": "nylium",
+    "textures": {
+      "down": "netherrack",
+      "east": "warped_nylium_side",
+      "north": "warped_nylium_side",
+      "south": "warped_nylium_side",
+      "up": "warped_nylium_top",
+      "west": "warped_nylium_side"
+    },
+    "blockshape": "invisible"
+  },
+  "magma": {
+    "isotropic": true,
+    "sound": "stone",
+    "textures": "magma",
+    "blockshape": "invisible"
+  }
+}

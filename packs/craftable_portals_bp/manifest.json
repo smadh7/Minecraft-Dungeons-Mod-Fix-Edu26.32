@@ -1,0 +1,54 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "§5Craftable Portals v2",
+    "description": "Craft Nether Portal Kits, End Portal Kits and End Portal Frames. Use a kit on the ground to build a working portal.",
+    "uuid": "92b68476-b7d5-494d-a97d-6db54c630621",
+    "version": [
+      2,
+      0,
+      0
+    ],
+    "min_engine_version": [
+      1,
+      21,
+      100
+    ]
+  },
+  "modules": [
+    {
+      "type": "data",
+      "uuid": "82a62b27-39c0-4aac-a741-207a6898315e",
+      "version": [
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "type": "script",
+      "language": "javascript",
+      "entry": "scripts/main.js",
+      "uuid": "9f6fe56d-c0b8-485b-9963-f656e75ba2a8",
+      "version": [
+        2,
+        0,
+        0
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "module_name": "@minecraft/server",
+      "version": "2.1.0"
+    },
+    {
+      "uuid": "06eaf720-d2e7-4823-bb94-33361ed9fd09",
+      "version": [
+        2,
+        0,
+        0
+      ]
+    }
+  ]
+}

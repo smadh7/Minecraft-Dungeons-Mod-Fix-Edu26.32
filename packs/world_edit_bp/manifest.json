@@ -1,0 +1,56 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "§dWorld Edit v3",
+    "description": "Selection wand, set/replace/walls, copy/paste/rotate, spheres, brushes, terrain tools and undo/redo. Operators only. /we:help",
+    "uuid": "7712ef55-3637-4549-ab24-5a5528a6fb0b",
+    "version": [
+      3,
+      0,
+      0
+    ],
+    "min_engine_version": [
+      1,
+      21,
+      100
+    ]
+  },
+  "modules": [
+    {
+      "type": "data",
+      "uuid": "3866098b-4ccb-45e8-83cf-e889c72a630c",
+      "version": [
+        3,
+        0,
+        0
+      ]
+    },
+    {
+      "type": "script",
+      "language": "javascript",
+      "entry": "scripts/main.js",
+      "uuid": "4a191f3c-259c-4a73-ad0b-275bb7bdcb3d",
+      "version": [
+        3,
+        0,
+        0
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "module_name": "@minecraft/server",
+      "version": "2.1.0"
+    },
+    {
+      "module_name": "@minecraft/server-ui",
+      "version": "2.0.0"
+    }
+  ],
+  "metadata": {
+    "authors": [
+      "Remake of World Edit v2.1 by BONY162"
+    ],
+    "license": "Original concepts by BONY162 / d6b; this rewrite shares no code"
+  }
+}

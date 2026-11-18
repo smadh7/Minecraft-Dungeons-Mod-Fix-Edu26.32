@@ -1,0 +1,375 @@
+{
+ "_source": "Mojang/bedrock-samples v1.26.30.5 resource_pack/blocks.json (entries copied verbatim)",
+ "groups": {
+  "underground": [
+   "stone",
+   "granite",
+   "diorite",
+   "andesite",
+   "deepslate",
+   "tuff",
+   "calcite",
+   "dripstone_block",
+   "smooth_basalt",
+   "gravel",
+   "dirt",
+   "coarse_dirt",
+   "dirt_with_roots",
+   "clay",
+   "infested_stone",
+   "infested_deepslate",
+   "bedrock"
+  ],
+  "surface": [
+   "grass",
+   "podzol",
+   "mycelium",
+   "grass_path",
+   "sand",
+   "red_sand",
+   "sandstone",
+   "red_sandstone",
+   "suspicious_sand",
+   "suspicious_gravel",
+   "moss_block",
+   "pale_moss_block",
+   "mud",
+   "snow",
+   "packed_ice",
+   "ice",
+   "hardened_clay",
+   "white_terracotta",
+   "orange_terracotta",
+   "yellow_terracotta",
+   "brown_terracotta",
+   "red_terracotta",
+   "light_gray_terracotta"
+  ],
+  "nether": [
+   "netherrack",
+   "basalt",
+   "blackstone",
+   "soul_sand",
+   "soul_soil",
+   "crimson_nylium",
+   "warped_nylium",
+   "magma"
+  ],
+  "end": [
+   "end_stone"
+  ]
+ },
+ "blocks": {
+  "stone": {
+   "sound": "stone",
+   "textures": "flattened_stone"
+  },
+  "granite": {
+   "sound": "stone",
+   "textures": "granite"
+  },
+  "diorite": {
+   "sound": "stone",
+   "textures": "diorite"
+  },
+  "andesite": {
+   "sound": "stone",
+   "textures": "andesite"
+  },
+  "deepslate": {
+   "isotropic": {
+    "down": true,
+    "up": true
+   },
+   "sound": "deepslate",
+   "textures": {
+    "down": "deepslate_top",
+    "side": "deepslate",
+    "up": "deepslate_top"
+   }
+  },
+  "tuff": {
+   "sound": "tuff",
+   "textures": "tuff"
+  },
+  "calcite": {
+   "sound": "calcite",
+   "textures": "calcite"
+  },
+  "dripstone_block": {
+   "sound": "dripstone_block",
+   "textures": "dripstone_block"
+  },
+  "smooth_basalt": {
+   "sound": "basalt",
+   "textures": "smooth_basalt"
+  },
+  "gravel": {
+   "sound": "gravel",
+   "textures": "gravel"
+  },
+  "dirt": {
+   "isotropic": true,
+   "sound": "gravel",
+   "textures": "flattened_dirt"
+  },
+  "coarse_dirt": {
+   "isotropic": true,
+   "sound": "gravel",
+   "textures": "coarse_dirt"
+  },
+  "dirt_with_roots": {
+   "isotropic": true,
+   "sound": "dirt_with_roots",
+   "textures": "dirt_with_roots"
+  },
+  "clay": {
+   "isotropic": true,
+   "sound": "gravel",
+   "textures": "clay"
+  },
+  "infested_stone": {
+   "sound": "stone",
+   "textures": "infested_stone"
+  },
+  "infested_deepslate": {
+   "isotropic": {
+    "down": true,
+    "up": true
+   },
+   "sound": "deepslate",
+   "textures": {
+    "down": "deepslate_top",
+    "side": "deepslate",
+    "up": "deepslate_top"
+   }
+  },
+  "bedrock": {
+   "sound": "stone",
+   "textures": "bedrock"
+  },
+  "grass": {
+   "carried_textures": {
+    "down": "grass_carried_bottom",
+    "side": "grass_carried",
+    "up": "grass_carried_top"
+   },
+   "isotropic": {
+    "down": true,
+    "up": true
+   },
+   "sound": "grass",
+   "textures": {
+    "down": "grass_bottom",
+    "side": "grass_side",
+    "up": "grass_top"
+   }
+  },
+  "podzol": {
+   "isotropic": {
+    "down": true,
+    "up": true
+   },
+   "sound": "gravel",
+   "textures": {
+    "down": "dirt_podzol_bottom",
+    "side": "dirt_podzol_side",
+    "up": "dirt_podzol_top"
+   }
+  },
+  "mycelium": {
+   "isotropic": {
+    "down": true,
+    "up": true
+   },
+   "sound": "grass",
+   "textures": {
+    "down": "mycelium_bottom",
+    "side": "mycelium_side",
+    "up": "mycelium_top"
+   }
+  },
+  "grass_path": {
+   "isotropic": {
+    "down": true,
+    "up": true
+   },
+   "sound": "grass",
+   "textures": {
+    "down": "dirt",
+    "side": "grass_path_side",
+    "up": "grass_path_top"
+   }
+  },
+  "sand": {
+   "ambient_occlusion_exponent": 0.55,
+   "isotropic": true,
+   "sound": "sand",
+   "textures": "flattened_sand"
+  },
+  "red_sand": {
+   "ambient_occlusion_exponent": 0.55,
+   "isotropic": true,
+   "sound": "sand",
+   "textures": "red_sand"
+  },
+  "sandstone": {
+   "ambient_occlusion_exponent": 1.0,
+   "isotropic": {
+    "down": true,
+    "up": true
+   },
+   "sound": "stone",
+   "textures": {
+    "down": "flattened_sandstone_bottom",
+    "side": "flattened_sandstone",
+    "up": "flattened_sandstone_top"
+   }
+  },
+  "red_sandstone": {
+   "ambient_occlusion_exponent": 1.0,
+   "isotropic": {
+    "down": true,
+    "up": true
+   },
+   "sound": "stone",
+   "textures": {
+    "down": "flattened_redsandstone_bottom",
+    "side": "flattened_redsandstone",
+    "up": "flattened_redsandstone_top"
+   }
+  },
+  "suspicious_sand": {
+   "ambient_occlusion_exponent": 0.55,
+   "sound": "suspicious_sand",
+   "textures": "suspicious_sand"
+  },
+  "suspicious_gravel": {
+   "sound": "suspicious_gravel",
+   "textures": "suspicious_gravel"
+  },
+  "moss_block": {
+   "sound": "moss_block",
+   "textures": "moss_block"
+  },
+  "pale_moss_block": {
+   "sound": "moss_block",
+   "textures": "pale_moss_block"
+  },
+  "mud": {
+   "sound": "mud",
+   "textures": "mud"
+  },
+  "snow": {
+   "ambient_occlusion_exponent": 1.0,
+   "isotropic": true,
+   "sound": "snow",
+   "textures": "snow"
+  },
+  "packed_ice": {
+   "sound": "glass",
+   "textures": "ice_packed"
+  },
+  "ice": {
+   "sound": "glass",
+   "textures": "ice"
+  },
+  "hardened_clay": {
+   "isotropic": true,
+   "sound": "terracotta",
+   "textures": "hardened_clay"
+  },
+  "white_terracotta": {
+   "sound": "terracotta",
+   "textures": "white_terracotta"
+  },
+  "orange_terracotta": {
+   "sound": "terracotta",
+   "textures": "orange_terracotta"
+  },
+  "yellow_terracotta": {
+   "sound": "terracotta",
+   "textures": "yellow_terracotta"
+  },
+  "brown_terracotta": {
+   "sound": "terracotta",
+   "textures": "brown_terracotta"
+  },
+  "red_terracotta": {
+   "sound": "terracotta",
+   "textures": "red_terracotta"
+  },
+  "light_gray_terracotta": {
+   "sound": "terracotta",
+   "textures": "light_gray_terracotta"
+  },
+  "netherrack": {
+   "isotropic": true,
+   "sound": "netherrack",
+   "textures": "netherrack"
+  },
+  "basalt": {
+   "sound": "basalt",
+   "textures": {
+    "down": "basalt_top",
+    "side": "basalt_side",
+    "up": "basalt_top"
+   }
+  },
+  "blackstone": {
+   "sound": "stone",
+   "textures": {
+    "down": "blackstone_top",
+    "side": "blackstone",
+    "up": "blackstone_top"
+   }
+  },
+  "soul_sand": {
+   "sound": "soul_sand",
+   "textures": "soul_sand"
+  },
+  "soul_soil": {
+   "sound": "soul_soil",
+   "textures": "soul_soil"
+  },
+  "crimson_nylium": {
+   "isotropic": {
+    "down": true,
+    "up": true
+   },
+   "sound": "nylium",
+   "textures": {
+    "down": "netherrack",
+    "east": "crimson_nylium_side",
+    "north": "crimson_nylium_side",
+    "south": "crimson_nylium_side",
+    "up": "crimson_nylium_top",
+    "west": "crimson_nylium_side"
+   }
+  },
+  "warped_nylium": {
+   "isotropic": {
+    "down": true,
+    "up": true
+   },
+   "sound": "nylium",
+   "textures": {
+    "down": "netherrack",
+    "east": "warped_nylium_side",
+    "north": "warped_nylium_side",
+    "south": "warped_nylium_side",
+    "up": "warped_nylium_top",
+    "west": "warped_nylium_side"
+   }
+  },
+  "magma": {
+   "isotropic": true,
+   "sound": "stone",
+   "textures": "magma"
+  },
+  "end_stone": {
+   "sound": "stone",
+   "textures": "end_stone"
+  }
+ }
+}

@@ -1,3 +1,4 @@
 __pycache__/
 *.pyc
 *.mcworld.tmp
+node_modules/

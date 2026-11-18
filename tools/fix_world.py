@@ -47,6 +47,14 @@ RP_JUNK = ["animation_controllers", "materials", "models", "render_controllers",
            "textures", "texts"]
 BP_JUNK = [".data"]
 
+REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# remade add-ons from packs/ that are installed and enabled in the world
+WORLD_ADDONS = [
+    ("world_edit_bp", "behavior"),         # World Edit v3 (operators only)
+    ("craftable_portals_bp", "behavior"),  # Craftable Portals v2
+    ("craftable_portals_rp", "resource"),
+]
+
 # Exact command rewrites (old -> new).  Command blocks keep their stored
 # command version, so everything else keeps its original behaviour.
 COMMAND_FIXES = {
@@ -133,14 +141,26 @@ def fix_packs(root):
     log("  upgraded both pack manifests to format_version 2 (v%s)" %
         ".".join(map(str, PACK_VERSION)))
 
-    write_json(os.path.join(root, "world_resource_packs.json"),
-               [{"pack_id": RP_UUID, "version": PACK_VERSION}])
-    write_json(os.path.join(root, "world_behavior_packs.json"),
-               [{"pack_id": BP_UUID, "version": PACK_VERSION}])
-    hist = lambda u: {"packs": [{"can_be_redownloaded": False, "name": PACK_NAME,  # noqa: E731
-                                 "uuid": u, "version": PACK_VERSION}]}
-    write_json(os.path.join(root, "world_resource_pack_history.json"), hist(RP_UUID))
-    write_json(os.path.join(root, "world_behavior_pack_history.json"), hist(BP_UUID))
+    # remade add-ons (see tools/build_packs.py). X-Ray is NOT enabled in the world:
+    # it would make the map see-through for everyone; it ships as addons/XRay_v2.mcaddon.
+    rps = [(RP_UUID, PACK_VERSION, PACK_NAME)]
+    bps = [(BP_UUID, PACK_VERSION, PACK_NAME)]
+    for folder, kind in WORLD_ADDONS:
+        src = os.path.join(REPO, "packs", folder)
+        m = json.load(open(os.path.join(src, "manifest.json")))
+        dst = os.path.join(root, "%s_packs" % kind, folder)
+        shutil.copytree(src, dst)
+        h = m["header"]
+        # added packs go first = higher priority than the map's own packs
+        (rps if kind == "resource" else bps).insert(0, (h["uuid"], h["version"], h["name"]))
+        log("  added remade pack %-22s %s v%s" % (folder, h["uuid"], ".".join(map(str, h["version"]))))
+
+    for kind, packs in (("resource", rps), ("behavior", bps)):
+        write_json(os.path.join(root, "world_%s_packs.json" % kind),
+                   [{"pack_id": u, "version": v} for u, v, _ in packs])
+        write_json(os.path.join(root, "world_%s_pack_history.json" % kind),
+                   {"packs": [{"can_be_redownloaded": False, "name": n, "uuid": u, "version": v}
+                              for u, v, n in packs]})
     log("  updated world pack lists / history")
 
 

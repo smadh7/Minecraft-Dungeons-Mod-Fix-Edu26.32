@@ -1,0 +1,108 @@
+{
+  "format_version": "1.21.40",
+  "stone": {
+    "sound": "stone",
+    "textures": "flattened_stone",
+    "blockshape": "invisible"
+  },
+  "granite": {
+    "sound": "stone",
+    "textures": "granite",
+    "blockshape": "invisible"
+  },
+  "diorite": {
+    "sound": "stone",
+    "textures": "diorite",
+    "blockshape": "invisible"
+  },
+  "andesite": {
+    "sound": "stone",
+    "textures": "andesite",
+    "blockshape": "invisible"
+  },
+  "deepslate": {
+    "isotropic": {
+      "down": true,
+      "up": true
+    },
+    "sound": "deepslate",
+    "textures": {
+      "down": "deepslate_top",
+      "side": "deepslate",
+      "up": "deepslate_top"
+    },
+    "blockshape": "invisible"
+  },
+  "tuff": {
+    "sound": "tuff",
+    "textures": "tuff",
+    "blockshape": "invisible"
+  },
+  "calcite": {
+    "sound": "calcite",
+    "textures": "calcite",
+    "blockshape": "invisible"
+  },
+  "dripstone_block": {
+    "sound": "dripstone_block",
+    "textures": "dripstone_block",
+    "blockshape": "invisible"
+  },
+  "smooth_basalt": {
+    "sound": "basalt",
+    "textures": "smooth_basalt",
+    "blockshape": "invisible"
+  },
+  "gravel": {
+    "sound": "gravel",
+    "textures": "gravel",
+    "blockshape": "invisible"
+  },
+  "dirt": {
+    "isotropic": true,
+    "sound": "gravel",
+    "textures": "flattened_dirt",
+    "blockshape": "invisible"
+  },
+  "coarse_dirt": {
+    "isotropic": true,
+    "sound": "gravel",
+    "textures": "coarse_dirt",
+    "blockshape": "invisible"
+  },
+  "dirt_with_roots": {
+    "isotropic": true,
+    "sound": "dirt_with_roots",
+    "textures": "dirt_with_roots",
+    "blockshape": "invisible"
+  },
+  "clay": {
+    "isotropic": true,
+    "sound": "gravel",
+    "textures": "clay",
+    "blockshape": "invisible"
+  },
+  "infested_stone": {
+    "sound": "stone",
+    "textures": "infested_stone",
+    "blockshape": "invisible"
+  },
+  "infested_deepslate": {
+    "isotropic": {
+      "down": true,
+      "up": true
+    },
+    "sound": "deepslate",
+    "textures": {
+      "down": "deepslate_top",
+      "side": "deepslate",
+      "up": "deepslate_top"
+    },
+    "blockshape": "invisible"
+  },
+  "bedrock": {
+    "sound": "stone",
+    "textures": "bedrock",
+    "blockshape": "invisible"
+  }
+}

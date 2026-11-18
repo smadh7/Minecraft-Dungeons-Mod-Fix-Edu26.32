@@ -1,0 +1,54 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "§bX-Ray v2 (night vision)",
+    "description": "Adds /xray:nightvision so you can see in the dark while using X-Ray.",
+    "uuid": "e653a62b-05b0-4b94-a9bf-c7210f04d70c",
+    "version": [
+      2,
+      0,
+      0
+    ],
+    "min_engine_version": [
+      1,
+      21,
+      100
+    ]
+  },
+  "modules": [
+    {
+      "type": "data",
+      "uuid": "3c2dbf69-e94b-42a7-b2a1-8efd2d10fbee",
+      "version": [
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "type": "script",
+      "language": "javascript",
+      "entry": "scripts/main.js",
+      "uuid": "047b452c-097d-464c-aeb7-ae3a94a57293",
+      "version": [
+        2,
+        0,
+        0
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "module_name": "@minecraft/server",
+      "version": "2.1.0"
+    },
+    {
+      "uuid": "77443209-1b10-406a-8aad-31bbba7aa2b6",
+      "version": [
+        2,
+        0,
+        0
+      ]
+    }
+  ]
+}

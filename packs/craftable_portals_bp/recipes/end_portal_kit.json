@@ -1,0 +1,33 @@
+{
+  "format_version": "1.21.60",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "portals:end_portal_kit"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "EEE",
+      "ELE",
+      "EEE"
+    ],
+    "key": {
+      "E": {
+        "item": "minecraft:ender_eye"
+      },
+      "L": {
+        "item": "minecraft:lava_bucket"
+      }
+    },
+    "unlock": [
+      {
+        "item": "minecraft:ender_eye"
+      }
+    ],
+    "result": {
+      "item": "portals:end_portal_kit",
+      "count": 1
+    }
+  }
+}

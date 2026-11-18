@@ -22,7 +22,7 @@ The world only turns on one pack pair (*mc dungeons sounds*). It also contained:
 | `craftable_portals_tiny_addons_behaviourpack` | Depends on a resource pack (`f0549f37…`) that isn't included | removed |
 | `X-RayByd6b` | Built on custom `.material` files and GLSL/HLSL shaders, which the current renderer no longer supports. Its manifest also lists a `variant_0` subpack folder that doesn't exist | removed |
 
-None of these were part of the map, and none of them were turned on.
+None of these were part of the map, and none of them were turned on. All three have been **rewritten from scratch** for 26.32. See [ADDONS.md](ADDONS.md) and section 7 below.
 
 ## 3. The *mc dungeons sounds* packs used a legacy format
 
@@ -57,6 +57,18 @@ All other entities (NPCs, villagers, armour stands, paintings, items, named mobs
 
 This is a **flat** world, so every newly generated chunk uses the flat layer list. That list still referenced `minecraft:grass`, which was renamed to `minecraft:grass_block` (1.20.60).
 **Fix:** layer name updated. Every other setting is unchanged: Adventure mode, cheats and command blocks on, keep inventory, spawn at the intro camp.
+
+## 7. Removed packs remade (World Edit v3, Craftable Portals v2, X-Ray v2)
+
+| Old pack | Why it was broken | Remake |
+|---|---|---|
+| World Edit v2.1 | Overrode `player.json` to run a function **every tick**. Used pre-1.19.50 `/execute`, aux data values and `replaceitem`. Depended on a missing RP. Anyone could trigger it by dropping named items. | Script API (`@minecraft/server` 2.1.0): 34 `/we:` commands, a wand, menus, undo/redo and brushes. **Operators only.** No `player.json` override, no tick function. Plain-command fallback functions included. |
+| Craftable Portals | Recipes produced `portal`, `end_portal` and `end_gateway`, which **are not items**, so 3 of the 4 recipes could never work. Used legacy `bucket` data 10 and format 1.12. Depended on a missing RP. | 1.21.60 recipes with recipe-book unlocks. Recipes make an **End Portal Frame**, a **Nether Portal Kit** or an **End Portal Kit**. A kit builds a complete, working portal where you use it, and only in empty space. |
+| X-Ray | Custom materials and HLSL/GLSL shaders, which RenderDragon ignores. A missing `variant_0` folder. About 230 duplicated ore textures. | A pure `blocks.json` pack (`"blockshape": "invisible"` on 49 vanilla terrain blocks, with entries copied from the 26.30 vanilla pack so textures and footstep sounds stay correct). 3 modes as subpacks. `/xray:nightvision` replaces the shader "fullbright". |
+
+World Edit v3 and Craftable Portals v2 are installed **and enabled** in the world. X-Ray v2 is **not**, because it would make the map see-through for every player. It ships separately as `addons/XRay_v2.mcaddon`.
+
+Checks: all scripts type-check against the official 2.1.0 / 2.0.0 typings (`npm run check`). The geometry code is unit-tested against brute force (`npm test`). Every block, item and command name was checked against Mojang's bedrock-samples v1.26.30.5 data.
 
 ## How the world database was edited safely
 

@@ -1,0 +1,12 @@
+{
+  "resource_pack_name": "craftable_portals",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "portals_nether_kit": {
+      "textures": "textures/items/portals_nether_kit"
+    },
+    "portals_end_kit": {
+      "textures": "textures/items/portals_end_kit"
+    }
+  }
+}

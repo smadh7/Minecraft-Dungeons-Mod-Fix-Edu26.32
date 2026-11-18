@@ -1,0 +1,46 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "§bX-Ray v2",
+    "description": "Makes natural terrain invisible so ores, caves, chests and spawners show through. Pick a mode in the pack settings.",
+    "uuid": "77443209-1b10-406a-8aad-31bbba7aa2b6",
+    "version": [
+      2,
+      0,
+      0
+    ],
+    "min_engine_version": [
+      1,
+      21,
+      100
+    ]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "2261ba24-19fb-48bc-ade2-aad89ecb5537",
+      "version": [
+        2,
+        0,
+        0
+      ]
+    }
+  ],
+  "subpacks": [
+    {
+      "folder_name": "all",
+      "name": "All terrain (Overworld, Nether, End)",
+      "memory_tier": 0
+    },
+    {
+      "folder_name": "underground",
+      "name": "Underground only (stone, deepslate, tuff…)",
+      "memory_tier": 0
+    },
+    {
+      "folder_name": "nether",
+      "name": "Nether only",
+      "memory_tier": 0
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "minecraft-dungeons-edu-addons",
+  "private": true,
+  "description": "Type-checking and tests for the remade add-on scripts (not needed to play).",
+  "scripts": {
+    "check": "tsc -p jsconfig.json",
+    "test": "node --test tests/shapes.test.mjs",
+    "build": "python3 tools/build_packs.py && python3 tools/fix_world.py"
+  },
+  "devDependencies": {
+    "@minecraft/server": "2.1.0",
+    "@minecraft/server-ui": "2.0.0",
+    "typescript": "^5.6.0"
+  }
+}
